@@ -5,8 +5,8 @@ JAF is an automated bash script for conducting analysis of volatile memory files
 
 Please see README.txt file.
 
-LATEST VERSION: 0.4.7
-Added clarity to the meaning of the directory creation following MH feedback.
-Created PROFILE guessing command and saved as v0.4.7.
-Amended README for new HPDLLDUMP command and profile guessing operation, as well as guidance for analysing MAC and LINUX files.
-Added HPDLLDUMP command to automatically dump DLLs of hidden processes to a given folder for further analysis.
+LATEST VERSION: 0.5
+WIP VERSION - SYNTAX ERRORS IN PROFILE GENERATION
+See CHANGELOG for development.
+
+README 0.4.7 = jaf 0.5
