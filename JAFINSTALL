@@ -1,0 +1,27 @@
+#!/bin/bash
+
+[[ $EUID -ne 0 ]] && echo "This script must be run as root." && exit 1
+
+#DEBIAN / UBUNTU
+#sudo apt-get update
+#sudo apt-get install zenity -y
+#sudo apt-get install python -y
+
+#REDHAT
+#dnf install zenity
+#dnf install python
+
+#ARCH
+#pacman -S zenity
+#pacman -S python
+
+sudo chmod 755 jaf.sh
+
+jaf -h
+  if [[ $? == 0 ]]; then
+    zenity --info --title "JAF INSTALLER" --text "Installation Successful. Type jaf into CLI to run."
+  else
+    zenity --info --title "JAF INSTALLER" --text "Installation Failed. Please edit installation script to bash -x and rerun to troubleshoot."
+  fi
+
+  exit 0
