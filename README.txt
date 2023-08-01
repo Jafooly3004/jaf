@@ -52,9 +52,9 @@ JAF can be run by simply calling the jaf.sh script from the CLI, remember to mak
 If you wish to call it from anywhere in the distro, add it to the relevant PATH. Otherwise, simply call it from the cloned directory.
 
 JAF is primarily a command line tool that is created as a BASH script, with a simple GUI provided by the Zenity tool.
-JAF can be called from any location (when installed with the provided installation script) and does NOT require sudo privileges to run.
-When calling JAF, type jaf into the command line from any location - JAF will print information to the command line and request user input via pop-up boxes that will appear in the middle of your screen.
-On install, a /jaf directory will be created, which will contain JAF dependencies and results folders. JAF output is via files that are saved into a new directory that is created at the location that the user specifies when the command is run, e.g. /jaf/TEST. Documents that are saved will be saved to this location in the following format:
+JAF can be called from any location (when installed to the relevant PATH) and does NOT require sudo privileges to run.
+When calling JAF, type ./jaf.sh (assuming PATH - otherwise from the cloned repo directory) into the command line - JAF will print information to the command line and request user input via pop-up boxes that will appear in the middle of your screen.
+On install, a jaf directory will be created, which will contain JAF dependencies and results folders. JAF output is via files that are saved into a new directory that is created at the location that the user specifies when the command is run, e.g. jaf/TEST. Documents that are saved will be saved to this location in the following format:
 [OUTPUTNAME].[COMMANDRUN].txt
 In the case of manual commands, these will be saved with the [COMMANDSPECIFIED.MANUAL].txt format so that different commands can be differentiated.
 At this time, only one command can be run at a time. This will be addressed in later versions. However, the tool repeats and so there is no need to go through the whole thing again. When finished, please ensure that you use the QUIT&SAVE option rather than just cancelling and cancelling may mean that data is lost.
