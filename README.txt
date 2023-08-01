@@ -4,7 +4,11 @@ AUTHOR: Jaf
 
 Introduction:
 JAF is a frontend interface and triage tool designed to simplify and automate the forensic analysis of volatile memory via the Volatility Framework.
-The functionality of the tool is provided by Volatility, and JAF manages the user interaction .
+The functionality of the tool is provided by Volatility, and JAF manages the user interaction.
+
+JAF is designed to conduct TRIAGE ONLY - and is not evidential. 
+The tool will extract evidential artefacts from volatile memory dumps and provide easy access to key information such as IP address, and place these into a report for later viewing.
+For full command actions, see the below section of this readme.
 
 The current version of JAF is v1.0 - this is an initial release, there WILL be bugs and problems, if these are found, report this through GitHub.
 
@@ -126,6 +130,16 @@ HPAK (FDPro)
 
 COMMANDS:
 In this version of JAF there are 13 command options.
+
+There is also a triage command which will attempt to obtain common information from the file such as: 
+Password Hashes and Usernames
+IP Information
+Network Connection Information
+Hidden Process Information
+Suspicious Process Information
+MALFIND command
+The tool will attempt to run this on first analysis.
+
 CUSTOM COMMANDS AVAILABLE:
 PWHASH - This command will check the hivelist for the given target, carve the memory location for the SAM module and pass this memory address to the hashdump function - the output of this will be any known usernames and password hashes. This will be saved into a txt file for future use - NOTE: JAF does not contain an in-built hash cracker, and therefore this file will need to be manually passed to a password cracker of the user's choice.
 
